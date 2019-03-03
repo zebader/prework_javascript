@@ -81,25 +81,22 @@ function roverWall(rover){
     rover.x = 10;
     console.log("rover hit the wall!")}
 };
-
 function commands(str){
-  for(i = 0;i<str.length;i++){
-    roverWall(rover.x);
-    roverWall(rover.y);
-    if(str[i] === "l"){
-      turnLeft(rover);
+    for(i = 0;i<str.length;i++){
+      if(str[i] === "l"){
+        turnLeft(rover);
+      }
+      if(str[i] === "r"){
+        turnRight(rover);
+      }
+      if(str[i] === "f"){
+        moveForward(rover);
+      }
+      if(str[i] === "b"){
+        moveBackward(rover);
+      }
+      roverWall(rover);
+      rover.travelog.push(rover.x+","+ rover.y);
+      console.log(rover.x +","+rover.y);
     }
-    if(str[i] === "r"){
-      turnRight(rover);
-    }
-    if(str[i] === "f"){
-      moveForward(rover);
-    }
-    if(str[i] === "b"){
-      moveBackward(rover);
-    }
-    roverWall(rover);
-    console.log(rover.x +""+rover.y);
-    rover.travelog.push(rover.x+","+ rover.y);
-  }
 };
