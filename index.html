@@ -3,9 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Mars Rover</title>
-  <script src="javascripts/app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <style type="text/css">
+  	body{
+  		background: #fffa92;
+  		font-family: 'Orbitron', sans-serif;
+  		text-align: center;
+  	}
+  	p{
+  		font-size: 1em;
+  		color:#ccc75b;
+  	}
+  	button,button:active{
+  		font-family: 'Orbitron', sans-serif;
+	    border: 0;
+	    border-radius: 70px;
+	    background: #1E88E5;
+	    color: white;
+	    font-size: 1em;
+	    line-height: 1.2;
+	    white-space: nowrap;
+	    text-decoration: none;
+	    padding: 20px 60px;
+	    cursor: pointer;
+	    position: relative;
+	    display: block;
+	    margin: 30px auto;
+  	}
+  	button:hover{
+	    background: #1e76c3;
+  	}
+  	button:focus {
+    outline: none;
+	}
+  	hr{
+	  	display: block;
+	    height: 1px;
+	    border: 0;
+	    border-top: 1px solid #ccc75b;
+	    padding: 0; 
+  	}
+  	#mars-field{
+  		display: -webkit-box;
+  		display: -ms-flexbox;
+  		display: flex;
+  		-webkit-box-pack: center;
+  		    -ms-flex-pack: center;
+  		        justify-content: center;
+  		-ms-flex-wrap: wrap;
+  		    flex-wrap: wrap;
+  		width: 500px;
+  		height: auto;
+  		position: relative;
+  		left: 50%;
+  		-webkit-transform:translateX(-50%);
+  		    -ms-transform:translateX(-50%);
+  		        transform:translateX(-50%);
+  	}
+  	.fieldBox{
+  		width: 9%;
+    	height: 50px;
+    	background-color: #ccc75b;
+   	 	border-radius: 10px;
+  		margin: 2px;
+  	}
+  	#printcoo{
+  		display: none;
+  	}
+  	.finalstop{
+  		    -webkit-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+  </style>
 </head>
 <body>
-
+	<h1>Mars Rover Log</h1>
+	<div id="mars-field"></div>
+	<button onclick="viewLog()">View Log</button>
+	<div id="printcoo"></div>
+  <script src="javascripts/app.js"></script>
 </body>
 </html>
