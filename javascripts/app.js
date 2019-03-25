@@ -47,7 +47,7 @@ var roverGrid = [
 
 if(valCom === true && valCom2 === true){
 	commands(enterCom,rover);
-	commands(enterCom,rover2);
+	commands(enterCom2,rover2);
 }
 else{
 	alert("Invalid Command");
